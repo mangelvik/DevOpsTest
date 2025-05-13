@@ -1,7 +1,7 @@
 package main
 
 
-func getSecret() string {
- githubToken := "ghp_1234567890abcdefghijklmnopqrstuv"
- return githubToken;
+func getPassword() string {
+ password := "password123"
+ return password;
 }
