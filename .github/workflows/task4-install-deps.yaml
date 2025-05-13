@@ -1,15 +1,16 @@
-name: install go
+name: Build Go
 
-on: 
+on:
   push:
     branches: ["main"]
 
   workflow_dispatch:
 
 jobs:
-  pull-code:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: 'actions/checkout@v4'
-      - uses: actions/setup-go@v5
-      - run: go version
+   test-coverage:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+       - uses: actions/setup-go@v5
+       - run: go build -o main
+ 
